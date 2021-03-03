@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import os
 
 window = Tk()
@@ -8,7 +9,7 @@ window.resizable(False, False)
 
 # 기능작업 
 
-path = '사용할 경로'
+path = '경로'
 
 def create_folder2():
     result1 = textExample1.get("1.0", 'end-1c') # 이걸로 해야하네; END 도 안되고 "end" 도 안됨 윈도우만 그런듯;
@@ -23,6 +24,8 @@ def create_folder2():
     create_folder(path + re + '/폴더1')
     create_folder(path + re + '/폴더2')
     create_folder(path + re + '/폴더3')
+    messagebox.showinfo(" ", "폴더가 생성되었습니다.")
+
 
 def create_folder(directory):
     try:
